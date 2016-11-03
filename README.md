@@ -42,7 +42,7 @@ The `type` is `MATCH_STARTED` and the `attributes` are:
 
 * `format`: A string representing the match format (`RANKED`, `UNRANKED`, `PHANTOM_PANDORA`, `PANDORA`).
 * `player`: A string with the handle of the player.
-* `enemy`: A string with the handle of the enemy player.
+* `opponent`: A string with the handle of the opponent.
 * `first`: A boolean that indicates whether the player plays first or not.
 
 For example (formatted for legibility):
@@ -55,7 +55,7 @@ For example (formatted for legibility):
   "attributes": {
     "format": "RANKED",
     "player": "gutsyfrog",
-    "enemy": "hiroshi",
+    "opponent": "hiroshi",
     "first": true
   }
 }
@@ -67,7 +67,7 @@ The `type` is `MATCH_ENDED` and the `attributes` are:
 
 * `format`: A string representing the match format (`RANKED`, `UNRANKED`, `PHANTOM_PANDORA`, `PANDORA`).
 * `player`: A string with the handle of the player.
-* `enemy`: A string with the handle of the enemy player.
+* `opponent`: A string with the handle of the opponent.
 * `won`: A boolean that indicates whether the player won or not.
 
 For example (formatted for legibility):
@@ -80,7 +80,7 @@ For example (formatted for legibility):
   "attributes": {
     "format": "RANKED",
     "player": "gutsyfrog",
-    "enemy": "hiroshi",
+    "opponent": "hiroshi",
     "won": true
   }
 }
