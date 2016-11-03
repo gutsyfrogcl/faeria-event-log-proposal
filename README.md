@@ -9,7 +9,7 @@ A log is a plain text file where each line represents one event serialized as JS
 The basic structure of an event is:
 
 * `uuid`: A UUID.
-* `at`: An ISO 8601 date that represents when the event ocurred.
+* `at`: An ISO 8601 timestamp with millisecond precision that represents when the event ocurred.
 * `type`: A string representing the type of the event.
 * `attributes`: An additional JSON object with attributes that are dependent to the specific event type.
 
@@ -18,7 +18,7 @@ For example (formatted for legibility):
 ```json
 {
   "uuid": "d3d66c60-b899-4e81-8777-4b074567c9ed",
-  "at": "2016-11-02T20:45:48Z",
+  "at": "2016-11-02T20:45:48.123Z",
   "type": "EMPTY",
   "attributes": {
   }
@@ -43,7 +43,7 @@ For example (formatted for legibility):
 ```json
 {
   "uuid": "c25aab3f-9a5f-4294-acfe-c12b49d668b7",
-  "at": "2016-11-02T20:45:48Z",
+  "at": "2016-11-02T20:45:48.654Z",
   "type": "MATCH_STARTED",
   "attributes": {
     "format": "RANKED",
@@ -68,7 +68,7 @@ For example (formatted for legibility):
 ```json
 {
   "uuid": "d600751b-2603-4b7a-b133-bfada49b8943",
-  "at": "2016-11-02T20:56:27Z",
+  "at": "2016-11-02T20:56:27.058Z",
   "type": "MATCH_ENDED",
   "attributes": {
     "format": "RANKED",
