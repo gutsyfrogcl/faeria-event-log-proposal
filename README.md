@@ -1,6 +1,15 @@
 # Faeria event log proposal (WIP)
 
-To ease the task of measuring the performance of a Faeria player and their decks, an automated tracking mechanism is desired. Creating an API to provide statistics and match replays would be the ideal solution, but it can be too much too ask. Instead,  this document proposes an event log to be parsed by 3rd party tools created by the community.
+To ease the task of measuring the performance of a Faeria player and their decks, an automated tracking mechanism is desired.
+
+An API providing statistics and match replays is the ideal solution but, given the amount of effort necessary, it may not be feature of high priority for the Faeria development team. Instead, this document proposes a client side event log that can be parsed by 3rd party tools created by the community.
+
+The events can be incrementally added in new patches of the client, providing new levels of detail. For example:
+
+* Iteration 1: Add an event for a match ending, indicating the winner. This makes possible to track the winrate of a player.
+* Iteration 2: Add an event for a match starting. By substracting the timestamps of the match ending and starting events, it's possible to track match duration.
+* Iteration 3: Add an event for card draws. This makes possible to deduce the archetypes of the decks being played.
+* Future iterations: Add events for cards played, lands created, etc. Until the information is enough to re-play full matches.
 
 ## Log format
 
@@ -26,8 +35,6 @@ For example (formatted for legibility):
 ```
 
 ## Events
-
-The logging for different events can be incrementally added, for example just having events for a match starting and ending would be enough to have the winrate and average match duration for a player. 
 
 ### Match started
 
